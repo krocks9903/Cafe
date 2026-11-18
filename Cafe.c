@@ -32,8 +32,8 @@ float EndReceiptBill() {
     while(1) {
         printf("----------------|Welcome to Krish's Cafe :)|--------------\n");
         printf("Press K to start your order: ");
-        clearBuffer();
-        scanf("%c", &c);
+        scanf(" %c", &c); // Skip leading whitespace, then read one character
+        clearBuffer();    // Discard the rest of the line
         
         if(c == 'k' || c == 'K') {
             while(1) {
